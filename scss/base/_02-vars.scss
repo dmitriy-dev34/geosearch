@@ -1,0 +1,30 @@
+:root {
+  --wrapper-width: 1920px;
+  --container-width: 1200px;
+
+  --font-default: "Manrope", sans-serif;
+  --fz-body: 20px;
+
+  --bg-gray: #f6f7fe;
+  --main-color: #0077e6;
+
+  --accent-color: #22c55e;
+
+  --text-color: #2a3342;
+  --title-color: #2a3342;
+
+  --grid-gap: clamp(1rem, 0.636rem + 1.82vw, 2rem);
+
+  --bxs-block: 0px 4px 72px 0px rgba(110, 132, 165, 0.1);
+
+  --br-block: 32px;
+
+  @media (max-width: 800px) {
+    --br-block: 24px;
+  }
+
+  @media (max-width: 480px) {
+    --fz-body: 16px;
+    --br-block: 16px;
+  }
+}

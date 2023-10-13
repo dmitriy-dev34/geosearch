@@ -1,0 +1,28 @@
+@import "./base/03-default";
+
+/* ------------------- COMPONENTS -------------------- */
+// @import "./components/";
+@import "./components/btn-top";
+@import "./components/btn";
+@import "./components/btn-burger";
+
+// Select Country
+@import "./components/country";
+
+// Form
+@import "./components/form";
+@import "./components/form-input";
+@import "./components/form-search";
+@import "./components/checkbox";
+
+// Modals
+@import "./components/modal";
+
+/* ------------------- BLOCKS -------------------- */
+@import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/hero";
+@import "./blocks/advantages";
+@import "./blocks/opportunities";
+@import "./blocks/how-work";
+@import "./blocks/faq";

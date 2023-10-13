@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="./favicon/favicon.png">
+	<title>Geobúsqueda - Para romper la ubicación, la correspondencia y todos los datos de una persona</title>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<!-- CSS & JS -->
+	<link rel="stylesheet" href="./css/main.min.css">
+	<script defer src="./js/modal.js"></script>
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body class="page__body">
+	<div class="page__wrapper">
+		<!-- #btnScrollTop -->
+		<button type="button" id="btnScrollTop"></button>
+
+		<!-- Header -->
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__logo logo">
+					<img loading="lazy" src="./img/logo-icon.svg" width="40" height="40" alt="">
+					<div class="logo__name">Geo<span>búsqueda</span></div>
+				</div>
+				<div class="header__right">
+					<!-- nav -->
+					<nav class="header__nav nav">
+						<ul class="header__menu menu">
+							<li><a class="menu__link" href="#advantages">Ventajas</a></li>
+							<li><a class="menu__link" href="#how-work">Cómo funciona</a></li>
+							<li><a class="menu__link" href="#faq">Preguntas FRECUENTES</a></li>
+						</ul>
+					</nav>
+
+					<div class="header__btns">
+						<button type="button" class="btn btn-stroke header__login js-modal-btn" data-modal-open="modalLogin">
+							<i class="header__login-icon"></i>
+							<span class="header__login-label">Iniciar Sesión</span>
+						</button>
+						<!-- Select Country -->
+						<div class="header__country country">
+							<button type="button" class="country__btn">
+								<img class="country__fag flag-es" src="./img/flags/country-active/flag-spain.svg" width="20" height="20" alt="">
+								<span class="country__name is-selected">Sp</span>
+							</button>
+							<div class="country__dropdown">
+								<div class="country__list">
+									<a href="../" class="country__option">
+										<img class="country__fag flag-en" src="./img/flags/country-active/flag-united_kingdom.svg" width="20" height="20"
+											alt="En">
+										<span class="country__name">Inglés</span>
+									</a>
+									<a href="#" class="country__option active">
+										<img class="country__fag flag-sp" src="./img/flags/country-active/flag-spain.svg" width="20" height="20" alt="Sp">
+										<span class="country__name">España</span>
+									</a>
+									<a href="../th/" class="country__option">
+										<img class="country__fag flag-th" src="./img/flags/country-active/flag-thailand.svg" width="20" height="20" alt="Th">
+										<span class="country__name">Tailandia</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="header__burger btn-burger" aria-label="Open Menu"><span class="btn-burger__line"></span></button>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<main class="page__main">
+
+			<!-- Hero -->
+			<section class="section hero" id="hero">
+				<div class="hero__map">
+					<picture>
+						<source srcset="./img/hero-map.webp" type="image/webp">
+						<img loading="lazy" src="./img/hero-map.jpg" class="" width="" height="" alt="">
+					</picture>
+				</div>
+				<div class="container hero__container">
+					<div class="hero__content">
+						<div class="hero__text">
+							<h1 class="hero__title">Determinar la ubicación de cualquier teléfono móvil</h1>
+							<p class="hero__descr">Geobúsqueda permite localizar la geolocalización exacta de un teléfono móvil y es compatible con todos
+								tipos de teléfono, redes y países. Búsqueda rápida por número de teléfono.</p>
+							<!-- hero__phone-mob -->
+							<div class="hero__phone-mob">
+								<picture>
+									<source srcset="./img/hero-phone_mob.webp" type="image/webp">
+									<img loading="lazy" src="./img/hero-phone_mob.jpg" width="303" height="340" alt="">
+								</picture>
+							</div>
+						</div>
+						<!-- form-search -->
+						<form class="form form-search hero__form">
+							<div class="form-search__field">
+								<div class="form-search__mask">
+									<img class="country__fag flag-en" src="./img/flags/country-active/flag-spain.svg" width="20" height="20" alt="">
+								</div>
+								<input type="text" class="form-input form-search__input" id="inputPhone" placeholder="944261743" autocomplete="off">
+							</div>
+							<button type="button" class="btn form-search__btn">Número de Búsqueda</button>
+						</form>
+					</div>
+
+					<div class="hero__phone">
+						<div class="location-info">
+							<li class="location-info__title">Ubicación encontrada!</li>
+							<li class="location-info__country">Ciudad Aleatoria</li>
+						</div>
+						<picture>
+							<source srcset="./img/hero-phone.webp" type="image/webp">
+							<img loading="lazy" src="./img/hero-phone.jpg" width="303" height="602" alt="">
+						</picture>
+					</div>
+				</div>
+			</section>
+
+			<!-- Advantages -->
+			<section class="section advantages" id="advantages">
+				<div class="container">
+					<div class="section-heading text-center">
+						<h2 class="section-title">Busca y encuentra cualquier suscriptor con Geobúsqueda</h2>
+						<p class="section-descr">Es muy fácil averiguar la ubicación de un teléfono móvil</p>
+					</div>
+					<ul class="list-reset advantages__list">
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_1.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">Cualquier operador</h3>
+							<p>La geolocalización funciona en cualquier red celular</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_2.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">En cualquier parte del mundo</h3>
+							<p>Se puede rastrear cualquier número de teléfono móvil en el mundo</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_3.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">Cualquier dispositivo</h3>
+							<p>Seguimiento de cualquier dispositivo móvil, desde tabletas hasta teléfonos inteligentes de cualquier generación</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_4.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">En cualquier momento</h3>
+							<p>Nuestro servicio busca suscriptores a cualquier hora del día y de la noche</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Opportunities -->
+			<section class="section bg-gray opportunities" id="opportunities">
+				<div class="container">
+					<div class="section-heading text-center">
+						<h2 class="section-title">Averigua la ubicación de cualquier dispositivo móvil usando Geobúsqueda</h2>
+					</div>
+					<div class="section-grid">
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_1.svg" width="589" height="498" alt="">
+						</div>
+						<div class="opportunities__content">
+							<ul class="list-reset section-list">
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">Cualquier dispositivo móvil, desde teléfonos inteligentes hasta tabletas.</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">Cualquier número de teléfono móvil en el mundo puede ser rastreado.</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">Configure el mensaje que desea que el destinatario reciba.</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">Obtenga la ubicación exacta mostrada en el mapa.</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon ic-check"></i>
+									<p class="section-list__text">Envíe un número ilimitado de solicitudes de geolocalización a un teléfono.</p>
+								</li>
+							</ul>
+
+							<div class="section-btnwrapper">
+								<a href="#hero" class="btn section-btn">Encuentra un suscriptor <span>¡ahora mismo!</span></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- How it works -->
+			<section class="section how-work" id="how-work">
+				<div class="container">
+					<div class="section-grid">
+						<div class="how-work__content">
+							<h2 class="section-title">Cómo funciona el servicio Geobúsqueda</h2>
+							<ul class="list-reset section-list">
+								<li class="section-list__item">
+									<div class="how-work__number">01</div>
+									<p class="section-list__text">Ingresa el número de teléfono móvil que deseas encontrar.</p>
+								</li>
+								<li class="section-list__item">
+									<div class="how-work__number">02</div>
+									<p class="section-list__text">Enviaremos una solicitud SMS al número de teléfono especificado.</p>
+								</li>
+								<li class="section-list__item">
+									<div class="how-work__number">03</div>
+									<p class="section-list__text">en tu cuenta personal (ubicación, llamadas, todos los mensajes de mensajería).</p>
+								</li>
+							</ul>
+							<div class="section-btnwrapper">
+								<a href="#hero" class="btn section-btn">Encuentra un suscriptor <span>¡ahora mismo!</span></a>
+							</div>
+						</div>
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_2.svg" width="591" height="462" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="section bg-gray faq" id="faq">
+				<div class="container">
+					<h2 class="section-title text-center">Preguntas Frecuentes</h2>
+					<div class="section-grid">
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_3.svg" width="592" height="564" alt="">
+						</div>
+						<div class="faq__accordion accordion">
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-1">
+									<h3 class="item__title accordion__title">Puedo rastrear a una persona sin su conocimiento?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-1">
+									<p>Sí, somos el único servicio en funcionamiento en el territorio de la Federación Rusa que sabe y sabe cómo evitar
+										cualquier prohibición de geolocalización, encontramos cualquier número de teléfono, incluso si el dispositivo está
+										apagado, mostrará la última geolocalización en el mapa.</p>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-2">
+									<h3 class="item__title accordion__title">Cuánto tiempo se tarda en determinar la geolocalización?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-2">
+									<p>Después de pagar el servicio, se tarda un promedio de 50-80 segundos en determinar con precisión la ubicación y
+										aproximadamente 240-360 segundos adicionales para descargar todos los mensajes de mensajería y los detalles de las
+										llamadas.</p>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-3">
+									<h3 class="item__title accordion__title">¿Puedo encontrar a una persona usando su Servicio?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-3">
+									<p>Le mostraremos dónde estaba antes del apagado con una precisión de hasta un metro.</p>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-4">
+									<h3 class="item__title accordion__title">Es segura la información de ubicación de mi familia?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-4">
+									<p>¡Por supuesto! después de suscribirse, la información se almacena en la nube y solo está disponible para usted, por
+										favor, especifique un correo electrónico válido al registrarse.</p>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-5">
+									<h3 class="item__title accordion__title">Es legal seguir a una persona en un mapa?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-5">
+									<p>Sí, por supuesto, no hay una ley claramente prescrita que lo prohíba.</p>
+								</div>
+							</div>
+							<!-- item -->
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-6">
+									<h3 class="item__title accordion__title">Para qué fines puedo usar el servicio de ubicación por número?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-6">
+									<p>Puede utilizar la aplicación cuando pierda su dispositivo, para el control parental, para supervisar el trabajo en su
+										empresa, el movimiento de transporte, para encontrar la ubicación de teléfonos inteligentes con tarjetas SIM,
+										PhoneFinder
+										le brinda posibilidades ilimitadas.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-btnwrapper">
+						<a href="#hero" class="btn section-btn">Encuentra un suscriptor <span>¡ahora mismo!</span></a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<ul class="list-reset footer__list">
+						<li class="footer__item">
+							<div class="logo">
+								<img loading="lazy" src="./img/logo-icon.svg" width="40" height="40" alt="">
+								<div class="logo__name">Geo<span>búsqueda</span></div>
+							</div>
+						</li>
+						<li class="footer__item">© Todos los derechos reservados 2023-2014</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item">Número de licencia: 781522474404</li>
+						<li class="footer__item">Correo electrónico: Geobúsqueda@support.ru</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item">
+							<a href="#" target="_blank">Términos y condiciones</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" target="_blank">Política de cookies</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" target="_blank">Política de privacidad</a>
+						</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item footer__unsubscribe js-modal-btn" data-modal-open="modalUnsubscribe">Darse de baja</li>
+						<li class="footer__item">
+							<img loading="lazy" src="./img/icons/footer-payments.png" width="154" height="48" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Modal Email -->
+	<div class="modal modal-form modal-email">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<div class="modal__header text-center">
+					<h3 class="modal__title">¡Se ha encontrado el suscriptor con el número <span class="text-accent phone-output"></span>!</h3>
+					<p class="modal__descr">Para ver todos los datos del suscriptor, ingrese su dirección de correo electrónico y <span
+							class="modal-price">pague $1</span>
+					</p>
+				</div>
+				<form action="#" class="form-email">
+					<input type="email" name="email" class="form-input input-email" placeholder="Ingrese la dirección de correo electrónico"
+						autocomplete="off" required="">
+					<button type="submit" class="btn form__btn form-email__btn">Pagar Ahora</button>
+					<label class="check form__check form__privacy" for="privacy">
+						<input class="check__input" type="checkbox" name="privacy" id="privacy" checked>
+						<span class="check__box"></span>
+						<span class="check__label">He leído y acepto los términos de la <a href="./privacy-policy.html">política de
+								privacidad</a></span>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- / Modal Email -->
+
+	<!-- Modal Unsubscribe -->
+	<div class="modal modal-form modal-unsubscribe" data-modal="modalUnsubscribe">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<div class="modal__header text-center">
+					<h3 class="modal__title">¿Realmente deseas darte de baja?</h3>
+					<p class="modal__descr">Para cancelar la suscripción, ingresa tu dirección de correo electrónico</p>
+				</div>
+				<form action="#" class="form-unsubscribe">
+					<input type="email" name="email" class="form-input input-email" placeholder="Ingrese la dirección de correo electrónico"
+						autocomplete="off" required="">
+					<div class="form-unsubscribe__btns">
+						<button type="button" class="btn form__btn unsubscribe-no">No cancelar la suscripción</button>
+						<button type="submit" class="btn btn-stroke form__btn unsubscribe-yes">Cancelar la suscripción</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- / Modal Unsubscribe -->
+
+	<!-- Modal Login -->
+	<div class="modal modal-form modal-login" data-modal="modalLogin">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<!-- form-login -->
+				<form action="#" class="form form-login active" id="form-login">
+					<div class="modal__header text-center">
+						<h3 class="modal__title">Inicia sesión en tu cuenta personal</h3>
+						<p class="form__descr">Para iniciar sesión en tu cuenta personal, ingresa tu número de teléfono.</p>
+					</div>
+					<div class="form__body">
+						<div class=""></div>
+						<input type="email" name="email" class="form-input" placeholder="Dirección de correo electrónico" autocomplete="off" required>
+						<input type="password" name="password" class="form-input" placeholder="Contraseña" autocomplete="off" required>
+						<input type="submit" class="btn form__btn" value="Iniciar Sesión">
+					</div>
+					<div class="form__footer">
+						<div class="form__link">
+							<span class="form__link-label">¿Olvidaste tu contraseña?</span>
+							<span class="form__link-btn" id="password-resset">Recuperación</span>
+						</div>
+					</div>
+				</form>
+				<!-- form-password -->
+				<form action="#" class="form form-login" id="form-password">
+					<div class="modal__header text-center">
+						<h3 class="modal__title">Recuperar Contraseña</h3>
+						<p class="modal__descr">Para restablecer tu contraseña, ingresa tu dirección de correo electrónico.</p>
+					</div>
+					<div class="form__body">
+						<input type="email" name="email" class="form-input" placeholder="Dirección de correo electrónico" autocomplete="off" required>
+						<input type="submit" class="btn form__btn" value="Recuperar">
+					</div>
+					<div class="form__footer">
+						<div class="form__link">
+							<span class="form__link-label">¿Recuerdas la contraseña?</span>
+							<span class="form__link-btn" id="login-back">Iniciar Sesión</span>
+						</div>
+					</div>
+				</form>
+				<!-- / .form-login -->
+			</div>
+		</div>
+	</div>
+
+	<!-- / Modal Login -->
+</body>
+
+</html>

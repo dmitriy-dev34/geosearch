@@ -1,0 +1,54 @@
+.form {
+  &__btn {
+    width: 100%;
+  }
+
+  &__footer {
+    margin-top: 16px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+
+    &-label {
+      opacity: 0.8;
+    }
+
+    &-btn {
+      cursor: pointer;
+      color: var(--main-color);
+      transition: color 0.3s ease-in-out;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.form-login {
+  display: none;
+  animation: fade 0.3s ease-in-out;
+
+  &.active {
+    display: block;
+    animation: fade 0.3s ease-in-out;
+  }
+}
+
+.form-unsubscribe__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .unsubscribe-no {
+    background: #f44336;
+    &:hover {
+      background: #fa6c62;
+    }
+  }
+}

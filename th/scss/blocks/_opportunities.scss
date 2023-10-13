@@ -1,0 +1,17 @@
+.opportunities {
+  .section-btnwrapper {
+    justify-content: left;
+  }
+}
+
+@media (max-width: 992px) {
+  .opportunities__content {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .opportunities .section-btnwrapper {
+    justify-content: center;
+  }
+}

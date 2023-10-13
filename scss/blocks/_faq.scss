@@ -1,0 +1,109 @@
+// Accordion
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__item {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  &__head {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__title {
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: #cdcdcd;
+    position: relative;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: #cdcdcd;
+      transform: rotate(-90deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__body {
+    box-sizing: content-box;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+// Свойства для открытого аккордиона
+.accordion__head.active .accordion__title {
+  color: var(--main-color);
+}
+
+.accordion__head.active .accordion__icon {
+  transform: rotate(-45deg);
+  background: var(--main-color);
+  &::before {
+    background: var(--main-color);
+  }
+}
+
+.accordion__body.active {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .faq .section-grid {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq .section-img {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .accordion__item {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion__item {
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .accordion__title {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}

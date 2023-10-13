@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="./favicon/favicon.png">
+	<title>GeoSearch - To break through the location, correspondence and all the data of a person</title>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<!-- CSS & JS -->
+	<link rel="stylesheet" href="./css/main.min.css">
+	<script defer src="./js/modal.js"></script>
+	<script defer src="./js/main.js"></script>
+</head>
+
+<body class="page__body">
+	<div class="page__wrapper">
+		<!-- #btnScrollTop -->
+		<button type="button" id="btnScrollTop"></button>
+
+		<!-- Header -->
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__logo logo">
+					<img loading="lazy" src="./img/logo-icon.svg" width="40" height="40" alt="">
+					<div class="logo__name">Geo<span>Search</span></div>
+				</div>
+				<div class="header__right">
+					<!-- nav -->
+					<nav class="header__nav nav">
+						<ul class="header__menu menu">
+							<li><a class="menu__link" href="#advantages">ข้อดี</a></li>
+							<li><a class="menu__link" href="#opportunities">โอกาส</a></li>
+							<li><a class="menu__link" href="#how-work">วิธีการทำงาน</a></li>
+							<li><a class="menu__link" href="#faq">คำถามที่พบบ่อย</a></li>
+						</ul>
+					</nav>
+
+					<div class="header__btns">
+						<button type="button" class="btn btn-stroke header__login js-modal-btn" data-modal-open="modalLogin">
+							<i class="header__login-icon"></i>
+							<span class="header__login-label">เข้าสู่ระบบ</span>
+						</button>
+						<!-- Select Country -->
+						<div class="header__country country">
+							<button type="button" class="country__btn">
+								<img class="country__fag flag-th" src="./img/flags/country-active/flag-thailand.svg" width="20" height="20" alt="">
+								<span class="country__name is-selected">ไทย</span>
+							</button>
+							<div class="country__dropdown">
+								<div class="country__list">
+									<a href="../" class="country__option">
+										<img class="country__fag flag-en" src="./img/flags/country-active/flag-united_kingdom.svg" width="20" height="20"
+											alt="En">
+										<span class="country__name">อังกฤษ</span>
+									</a>
+									<a href="../es/" class="country__option">
+										<img class="country__fag flag-sp" src="./img/flags/country-active/flag-spain.svg" width="20" height="20" alt="Sp">
+										<span class="country__name">สเปน</span>
+									</a>
+									<a href="#" class="country__option active">
+										<img class="country__fag flag-th" src="./img/flags/country-active/flag-thailand.svg" width="20" height="20" alt="Th">
+										<span class="country__name">ไทย</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="header__burger btn-burger" aria-label="Open Menu"><span class="btn-burger__line"></span></button>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<main class="page__main">
+
+			<!-- Hero -->
+			<section class="section hero" id="hero">
+				<div class="hero__map">
+					<picture>
+						<source srcset="./img/hero-map.webp" type="image/webp">
+						<img loading="lazy" src="./img/hero-map.jpg" class="" width="" height="" alt="">
+					</picture>
+				</div>
+				<div class="container hero__container">
+					<div class="hero__content">
+						<div class="hero__text">
+							<h1 class="hero__title">กำหนดตำแหน่งของโทรศัพท์มือถือทุกเครือข่าย</h1>
+							<p class="hero__descr">GeoSearch
+								ช่วยให้คุณสามารถหาตำแหน่งที่อยู่ของโทรศัพท์มือถือได้โดยแม่นยำและเข้ากันได้กับโทรศัพท์ทุกประเภท
+								ทุกเครือข่าย และทุกประเทศ ค้นหาได้รวดเร็วจากหมายเลขโทรศัพท์</p>
+							<!-- hero__phone-mob -->
+							<div class="hero__phone-mob">
+								<picture>
+									<source srcset="./img/hero-phone_mob.webp" type="image/webp">
+									<img loading="lazy" src="./img/hero-phone_mob.jpg" width="303" height="340" alt="">
+								</picture>
+							</div>
+						</div>
+						<!-- form-search -->
+						<form class="form form-search hero__form">
+							<div class="form-search__field">
+								<div class="form-search__mask">
+									<img class="country__fag flag-en" src="./img/flags/country-active/flag-thailand.svg" width="20" height="20" alt="">
+								</div>
+								<input type="text" class="form-input form-search__input" id="inputPhone" placeholder="0 2298 0606" autocomplete="off">
+							</div>
+							<button type="button" class="btn form-search__btn">ค้นหาหมายเลข</button>
+						</form>
+					</div>
+
+					<div class="hero__phone">
+						<div class="location-info">
+							<li class="location-info__title">พบตำแหน่ง!</li>
+							<li class="location-info__country">คัมเบอร์แลนด์</li>
+							<li>เมริแลนด์ 21502, สหรัฐอเมริกา </li>
+							<li>39.6523605,-78.8005889</li>
+						</div>
+						<picture>
+							<source srcset="./img/hero-phone.webp" type="image/webp">
+							<img loading="lazy" src="./img/hero-phone.jpg" width="303" height="602" alt="">
+						</picture>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Advantages -->
+			<section class="section advantages" id="advantages">
+				<div class="container">
+					<div class="section-heading text-center">
+						<h2 class="section-title"><span class="text-accent">ค้นหาและพบ</span> สมาชิกใดๆ ด้วย GeoSearch</h2>
+						<p class="section-descr">มันง่ายมากที่จะหาตำแหน่งของโทรศัพท์มือถือ</p>
+					</div>
+					<ul class="list-reset advantages__list">
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_1.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">โดยไม่จำกัดผู้ให้บริการ</h3>
+							<p>การระบุตำแหน่งทำงานในเครือข่ายเซลลูลาร์ทุกประเภท</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_2.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">ทุกที่บนโลก</h3>
+							<p>สามารถติดตามหมายเลขโทรศัพท์มือถือใดๆ ทั่วโลกได้</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_3.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">อุปกรณ์ใดๆ</h3>
+							<p>ติดตามอุปกรณ์มือถือทุกชนิด ตั้งแต่แท็บเล็ตถึงสมาร์ทโฟนทุกรุ่น</p>
+						</li>
+						<li class="advantages__item">
+							<img class="advantages__item-icon" loading="lazy" src="./img/icons/ic-advantages_4.svg" width="56" height="56" alt="">
+							<h3 class="advantages__item-title">ทุกเวลา</h3>
+							<p>บริการของเรากำลังค้นหาสมาชิกได้ตลอดเวลากลางวันและกลางคืน</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- Opportunities -->
+			<section class="section bg-gray opportunities" id="opportunities">
+				<div class="container">
+					<div class="section-heading text-center">
+						<h2 class="section-title"><span class="text-accent">ค้นหาตำแหน่ง</span> ของอุปกรณ์มือถือใดๆ ด้วย GeoSearch</h2>
+					</div>
+					<div class="section-grid">
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_1.svg" width="589" height="498" alt="">
+						</div>
+						<div class="opportunities__content">
+							<ul class="list-reset section-list">
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">อุปกรณ์มือถือใดๆ ตั้งแต่สมาร์ทโฟนถึงแท็บเล็ต</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">สามารถติดตามหมายเลขโทรศัพท์มือถือใดๆ ทั่วโลกได้</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">กำหนดข้อความที่คุณต้องการให้ผู้รับได้รับ</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon"></i>
+									<p class="section-list__text">รับตำแหน่งที่แน่นอนที่แสดงบนแผนที่</p>
+								</li>
+								<li class="section-list__item">
+									<i class="section-list__icon ic-check"></i>
+									<p class="section-list__text">ส่งคำขอตำแหน่งที่ตั้งได้ไม่จำกัดจำนวนไปยังโทรศัพท์หนึ่งเครื่อง</p>
+								</li>
+							</ul>
+							<div class="section-btnwrapper">
+								<a href="#hero" class="btn section-btn">ค้นหาสมาชิก <span>ตอนนี้!</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- How it works -->
+			<section class="section how-work" id="how-work">
+				<div class="container">
+					<div class="section-grid">
+						<div class="how-work__content">
+							<h2 class="section-title">วิธีการใช้บริการ GeoSearch</h2>
+							<ul class="list-reset section-list">
+								<li class="section-list__item">
+									<div class="how-work__number">01</div>
+									<p class="section-list__text">ป้อนหมายเลขโทรศัพท์มือถือที่คุณต้องการค้นหา</p>
+								</li>
+								<li class="section-list__item">
+									<div class="how-work__number">02</div>
+									<p class="section-list__text">เราจะส่งคำขอ SMS ไปยังหมายเลขโทรศัพท์ที่ระบุ</p>
+								</li>
+								<li class="section-list__item">
+									<div class="how-work__number">03</div>
+									<p class="section-list__text">ในบัญชีส่วนตัวของคุณ (ตำแหน่ง, การโทร, ข้อความทุกข้อความจาก messenger)</p>
+								</li>
+							</ul>
+							<div class="section-btnwrapper">
+								<a href="#hero" class="btn section-btn">ค้นหาสมาชิก <span>ตอนนี้!</span></a>
+							</div>
+						</div>
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_2.svg" width="591" height="462" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="section bg-gray faq" id="faq">
+				<div class="container">
+					<h2 class="section-title text-center">คำถามที่พบบ่อย</h2>
+					<div class="section-grid">
+						<div class="section-img">
+							<img loading="lazy" src="./img/sect-img_3.svg" width="592" height="564" alt="">
+						</div>
+						<div class="faq__accordion accordion">
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-1">
+									<h3 class="item__title accordion__title">ฉันสามารถติดตามบุคคลโดยไม่ให้ทราบหรือไม่?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-1">
+									<p>ใช่ เราเป็นบริการทำงานเท่านั้นในรัสเซียที่รู้และรู้วิธีการหลบหลีก ข้อ จำกัด ในการติดตามตำแหน่งทุกหมายเลขโทรศัพท์
+										เราสามารถหาหมายเลขโทรศัพท์ใดๆ ได้ แม้ว่าอุปกรณ์จะปิดเสียงก็ตาม มันจะแสดงตำแหน่งล่าสุดบนแผนที่</p>
+								</div>
+							</div>
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-2">
+									<h3 class="item__title accordion__title">ระยะเวลาในการหาตำแหน่งที่ตั้งนั้นนานเท่าไร?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-2">
+									<p>หลังจากชำระค่าบริการแล้ว จะใช้เวลาเฉลี่ย 50-80 วินาทีในการหาตำแหน่งที่แม่นยำและประมาณ 240-360
+										วินาทีเพิ่มเติมในการดาวน์โหลดข้อความทุกข้อความจาก messenger และรายละเอียดการโทร</p>
+								</div>
+							</div>
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-3">
+									<h3 class="item__title accordion__title">โทรศัพท์ของฉันหายไป ฉันสามารถหามันได้ด้วยบริการของคุณหรือไม่?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-3">
+									<p>เราจะแสดงให้คุณเห็นที่มันอยู่ก่อนการปิดด้วยความแม่นยำสูงสุดถึงเมตรหนึ่ง</p>
+								</div>
+							</div>
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-4">
+									<h3 class="item__title accordion__title">ข้อมูลตำแหน่งของครอบครัวของฉันปลอดภัยหรือไม่?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-4">
+									<p>แน่นอน! หลังจากการสมัครสมาชิกข้อมูลจะถูกเก็บไว้ในคลาวด์และสามารถใช้ได้เฉพาะคุณเท่านั้น
+										กรุณาระบุอีเมลที่ทำงานเมื่อลงทะเบียน</p>
+								</div>
+							</div>
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-5">
+									<h3 class="item__title accordion__title">การตามตำแหน่งของบุคคลบนแผนที่นั้นถูกต้องกฎหมายหรือไม่?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-5">
+									<p>ใช่ แน่นอน ไม่มีกฎหมายที่จำเป็นเรื่องนี้</p>
+								</div>
+							</div>
+							<div class="item accordion__item">
+								<div class="accordion__head" data-tab="tab-6">
+									<h3 class="item__title accordion__title">วัตถุประสงค์ในการใช้บริการตำแหน่งหมายเลขคืออะไร?</h3>
+									<span class="accordion__icon"></span>
+								</div>
+								<div class="accordion__body" id="tab-6">
+									<p>คุณสามารถใช้แอปพลิเคชันเมื่อคุณหาหายเคยอุปกรณ์, สำหรับการควบคุมโดยพ่อแม่, สำหรับการติดตามงานในบริษัทของคุณ,
+										การเคลื่อนที่ของยานพาหนะ, การค้นหาตำแหน่งของสมาร์ทโฟนที่มีซิมการ์ด, PhoneFinder ให้ความสามารถไม่จำกัด</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-btnwrapper">
+						<a href="#hero" class="btn section-btn">ค้นหาสมาชิก <span>ตอนนี้!</span></a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<ul class="list-reset footer__list">
+						<li class="footer__item">
+							<div class="logo">
+								<img loading="lazy" src="./img/logo-icon.svg" width="40" height="40" alt="">
+								<div class="logo__name">Geo<span>Search</span></div>
+							</div>
+						</li>
+						<li class="footer__item">© สงวนลิขสิทธิ์ทั้งหมด 2023-2014</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item">หมายเลขใบอนุญาต: 781522474404</li>
+						<li class="footer__item">อีเมล: geosearch@support.ru</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item">
+							<a href="#" target="_blank">ข้อกำหนดและเงื่อนไข</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" target="_blank">นโยบายคุกกี้</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" target="_blank">นโยบายความเป็นส่วนตัว</a>
+						</li>
+					</ul>
+					<ul class="list-reset footer__list">
+						<li class="footer__item footer__unsubscribe js-modal-btn" data-modal-open="modalUnsubscribe">ยกเลิกการรับข้อมูล</li>
+						<li class="footer__item">
+							<img loading="lazy" src="./img/icons/footer-payments.png" width="154" height="48" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Modal Email -->
+	<div class="modal modal-form modal-email">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<div class="modal__header text-center">
+					<h3 class="modal__title">ผู้สมัครที่มีหมายเลข <span class="text-accent phone-output"></span> ได้รับการค้นพบแล้ว!</h3>
+					<p class="modal__descr">เพื่อดูข้อมูลผู้สมัครทั้งหมด กรุณากรอกที่อยู่อีเมลของคุณและ <span class="modal-price">ชำระ $1</span>
+					</p>
+				</div>
+				<form action="#" class="form-email">
+					<input type="email" name="email" class="form-input input-email" placeholder="กรอกที่อยู่อีเมล" autocomplete="off" required="">
+					<button type="submit" class="btn form__btn form-email__btn">ชำระตอนนี้</button>
+					<label class="check form__check form__privacy" for="privacy">
+						<input class="check__input" type="checkbox" name="privacy" id="privacy" checked>
+						<span class="check__box"></span>
+						<span class="check__label">ฉันได้อ่านและยอมรับข้อตกลงของ <a href="./privacy-policy.html">นโยบายความเป็นส่วนตัว
+								นี้</a></span>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- / Modal Email -->
+
+	<!-- Modal Unsubscribe -->
+	<div class="modal modal-form modal-unsubscribe" data-modal="modalUnsubscribe">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<div class="modal__header text-center">
+					<h3 class="modal__title">คุณต้องการยกเลิกการสมัครจริงหรือไม่?</h3>
+					<p class="modal__descr">หากต้องการยกเลิกการสมัคร กรุณากรอกที่อยู่อีเมลของคุณ</p>
+				</div>
+				<form action="#" class="form-unsubscribe">
+					<input type="email" name="email" class="form-input input-email" placeholder="กรอกที่อยู่อีเมล" autocomplete="off" required="">
+					<div class="form-unsubscribe__btns">
+						<button type="button" class="btn form__btn unsubscribe-no">ไม่ต้องการยกเลิก</button>
+						<button type="submit" class="btn btn-stroke form__btn unsubscribe-yes">ยกเลิกการสมัคร</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- / Modal Unsubscribe -->
+
+	<!-- Modal Login -->
+	<div class="modal modal-form modal-login" data-modal="modalLogin">
+		<div class="modal__overlay">
+			<div class="modal__body">
+				<div class="modal__close"></div>
+				<!-- form-login -->
+				<form action="#" class="form form-login active" id="form-login">
+					<div class="modal__header text-center">
+						<h3 class="modal__title">เข้าสู่บัญชีส่วนตัวของคุณ</h3>
+						<p class="form__descr">เพื่อเข้าสู่บัญชีส่วนตัวของคุณ กรุณากรอกหมายเลขโทรศัพท์มือถือของคุณ</p>
+					</div>
+					<div class="form__body">
+						<div class=""></div>
+						<input type="email" name="email" class="form-input" placeholder="ที่อยู่อีเมล" autocomplete="off" required>
+						<input type="password" name="password" class="form-input" placeholder="รหัสผ่าน" autocomplete="off" required>
+						<input type="submit" class="btn form__btn" value="เข้าสู่ระบบ">
+					</div>
+					<div class="form__footer">
+						<div class="form__link">
+							<span class="form__link-label">ลืมรหัสผ่าน?</span>
+							<span class="form__link-btn" id="password-resset">กู้คืน</span>
+						</div>
+					</div>
+				</form>
+				<!-- form-password -->
+				<form action="#" class="form form-login" id="form-password">
+					<div class="modal__header text-center">
+						<h3 class="modal__title">กู้คืนรหัสผ่าน</h3>
+						<p class="modal__descr">เพื่อกู้คืนรหัสผ่านของคุณ กรุณากรอกที่อยู่อีเมลของคุณ</p>
+					</div>
+					<div class="form__body">
+						<input type="email" name="email" class="form-input" placeholder="ที่อยู่อีเมล" autocomplete="off" required>
+						<input type="submit" class="btn form__btn" value="กู้คืน">
+					</div>
+					<div class="form__footer">
+						<div class="form__link">
+							<span class="form__link-label">จำรหัสผ่านของคุณหรือไม่?</span>
+							<span class="form__link-btn" id="login-back">เข้าสู่ระบบ</span>
+						</div>
+					</div>
+				</form>
+				<!-- / .form-login -->
+			</div>
+		</div>
+	</div>
+	<!-- / Modal Login -->
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+$btn-padding: 18px 32px;
+$btn-color: #fff;
+$btn-boder: 2px solid transparent;
+$btn-br: 100px;
+$btn-ff: var(--font-default);
+$btn-fz: 18px;
+$btn-fw: 700;
+$btn-bxs: none;
+
+.btn {
+  display: inline-block;
+  outline: none;
+  padding: $btn-padding;
+  color: #fff;
+  background: var(--accent-color);
+  border: $btn-boder;
+  border-radius: $btn-br;
+  font-family: $btn-ff;
+  font-size: $btn-fz;
+  font-weight: $btn-fw;
+  line-height: 1.4;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: $btn-bxs;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    background: #35df74;
+  }
+}
+
+.btn-stroke {
+  color: var(--main-color);
+  background: transparent;
+  border-color: var(--main-color);
+  &:hover {
+    background: var(--main-color);
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 16px;
+  }
+}

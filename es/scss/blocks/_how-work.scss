@@ -1,0 +1,56 @@
+.how-work {
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  .section-grid {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  &__number {
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .section-btnwrapper {
+    justify-content: left;
+  }
+}
+
+@media (max-width: 992px) {
+  .how-work .section-title {
+    text-align: center;
+  }
+
+  .how-work .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-work .section-img {
+    order: -1;
+  }
+
+  .how-work__content {
+    @extend .opportunities__content;
+  }
+
+  .how-work .section-btnwrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-work .section-title {
+    margin-bottom: 24px;
+  }
+}
